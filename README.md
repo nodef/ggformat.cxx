@@ -1,7 +1,8 @@
 # ggformat v1.1
 
 ggformat is a liberally licensed string formatting library for C++ that
-supports user defined types and sub-second compile times. It's meant to
+supports user defined types and sub-second compile times - by
+[Michael Savage](https://github.com/mikejsavage). It's meant to
 be used as a replacement for printf and friends.
 
 ggformat saves you time by reducing the amount of tedious boilerplate
@@ -25,6 +26,29 @@ half years with only a single minor bugfix. I consider it complete.
 - __v1.0 29th Oct 2017__: variadic arguments are now passed by const
   reference. You can now use ggformat with types that have deleted copy
   constructors/assignment operators.
+
+
+## Installation
+
+Run:
+```bash
+$ npm i ggformat.cxx
+```
+
+And then include `ggformat.h` as follows:
+```c
+#include "node_modules/ggformat.cxx/ggformat.h"
+```
+
+You may also want to include `ggformat.cpp` as follows:
+```cxx
+#ifndef __GGFORMAT_CXX__
+#define __GGFORMAT_CXX__
+#include "node_modules/ggformat.cxx/ggformat.cpp"
+#endif
+```
+
+This will include both the function declaration and their definitions into a single file.
 
 
 ## Usage
@@ -194,3 +218,10 @@ runtime, but compiles quickly.
 ggformat has a small codebase and will probably never receive another
 update. If you don't like some of my decisions you can easily create a
 local fork.
+
+<br>
+<br>
+
+
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/ggformat.cxx)
