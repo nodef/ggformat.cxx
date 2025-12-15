@@ -1,0 +1,22 @@
+{
+  "name": "ggformat.cxx",
+  "version": "1.1.0",
+  "description": "A string formatting library for C++; Michael Savage (2017).",
+  "keywords": [
+    "c++",
+    "library",
+    "string",
+    "formatting",
+    "format"
+  ],
+  "homepage": "https://github.com/nodef/ggformat.cxx#readme",
+  "bugs": {
+    "url": "https://github.com/nodef/ggformat.cxx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/ggformat.cxx.git"
+  },
+  "license": "ISC",
+  "main": "ggformat.h"
+}
