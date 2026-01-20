@@ -31,25 +31,34 @@ half years with only a single minor bugfix. I consider it complete.
 ## Installation
 
 Run:
+
 ```bash
 $ npm i ggformat.cxx
 ```
 
 And then include `ggformat.h` as follows:
-```c
-#include "node_modules/ggformat.cxx/ggformat.h"
-```
 
-You may also want to include `ggformat.cpp` as follows:
 ```cxx
-#ifndef __GGFORMAT_CXX__
-#define __GGFORMAT_CXX__
-#include "node_modules/ggformat.cxx/ggformat.cpp"
-#endif
+// main.cxx
+#define GGFORMAT_IMPLEMENTATION
+#include <ggformat.h>
+
+int main() { /* ... */ }
 ```
 
-This will include both the function declaration and their definitions into a single file.
+Finally, compile while adding the path `node_modules/ggformat.cxx` to your compiler's include paths.
 
+```bash
+$ clang++ -I./node_modules/ggformat.cxx main.cxx  # or, use g++
+$ g++     -I./node_modules/ggformat.cxx main.cxx
+```
+
+You may also use a simpler approach with the [cpoach](https://www.npmjs.com/package/cpoach.sh) tool, which automatically adds the necessary include paths of all the installed dependencies for your project.
+
+```bash
+$ cpoach clang++ main.cxx  # or, use g++
+$ cpoach g++     main.cxx
+```
 
 ## Usage
 
@@ -223,6 +232,7 @@ local fork.
 <br>
 
 
+[![](https://raw.githubusercontent.com/qb40/designs/gh-pages/0/image/11.png)](https://wolfram77.github.io)<br>
 [![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/mikejsavage/ggformat)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/ggformat.cxx)
